@@ -30,11 +30,11 @@ console.log('Testing Array.filter() polyfill:');
 
 // Basic filtering - even numbers
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const evenNumbers = numbers.filter(x => x % 2 === 0);
+const evenNumbers = numbers.myFilter(x => x % 2 === 0);
 console.log('Even numbers:', evenNumbers); // [2, 4, 6, 8, 10]
 
 // Filtering with index parameter
-const longStrings = ['a', 'hello', 'hi', 'javascript', 'world'].filter((str, index) => {
+const longStrings = ['a', 'hello', 'hi', 'javascript', 'world'].myFilter((str, index) => {
   return str.length > 2 && index > 0;
 });
 console.log('Long strings after index 0:', longStrings); // ['hello', 'javascript', 'world']
@@ -47,11 +47,11 @@ const people = [
   { name: 'Alice', age: 28, active: true }
 ];
 
-const activePeople = people.filter(person => person.active);
+const activePeople = people.myFilter(person => person.active);
 console.log('Active people:', activePeople);
 // [{ name: 'John', age: 30, active: true }, { name: 'Bob', age: 35, active: true }, { name: 'Alice', age: 28, active: true }]
 
-const adults = people.filter(person => person.age >= 30);
+const adults = people.myFilter(person => person.age >= 30);
 console.log('Adults (30+):', adults);
 // [{ name: 'John', age: 30, active: true }, { name: 'Bob', age: 35, active: true }]
 
