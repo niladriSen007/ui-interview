@@ -8,7 +8,7 @@ Array.prototype.myFilter = function (callback, options) {
 
   const actual_array = Object(this)
   let result_array = []
-  for (let index in actual_array) {
+  for (let index = 0; index < this.length; index++) {
     if (actual_array[index]) {
       if (callback.call(options, actual_array[index], index, actual_array)) {
         result_array.push(actual_array[index])
@@ -23,14 +23,13 @@ const age = [11, 45, 23, 17, 98]
 const filtered = age.myFilter((age) => age > 18)
 console.log(filtered)
 
-
 const option = {
-  factor:3,
-  multiply(num){
-    return this.factor * num;
-  }
+  factor: 3,
+  multiply(num) {
+    return this.factor * num
+  },
 }
-const advancedFilter = age.myFilter(function(elem){
+const advancedFilter = age.myFilter(function (elem) {
   return this.multiply(elem) > 45
-},option)
+}, option)
 console.log(advancedFilter)
