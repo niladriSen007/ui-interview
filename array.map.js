@@ -38,5 +38,5 @@ const multiplier = {
 }
 const tripled = numbers.myMap(function (x) {
   return this.multiply(x)
-}, multiplier)
+}, multiplier) 
 console.log("Tripled:", tripled)
