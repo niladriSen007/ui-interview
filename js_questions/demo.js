@@ -10,7 +10,16 @@ function sortArray(arr) {
 
 /* console.log(sortArray([["1", 2], ["2", 1], ["3", 3]])); */
 
-console.log(Number.NEGATIVE_INFINITY)
+/* console.log(Number.NEGATIVE_INFINITY)
 console.log(Infinity)
 
-console.log('A  &* man &*('.replace(/[^a-zA-Z]/g,''))
+console.log('A  &* man &*('.replace(/[^a-zA-Z]/g,'')) */
+
+
+const obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+console.log(Object.values(obj))

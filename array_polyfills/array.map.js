@@ -11,7 +11,7 @@ Array.prototype.myMap = function (callback, thisArg) {
   const actual_array = Object(this)
   const len = parseInt(actual_array?.length) || 0
 
-  let result = new Array(len)
+  let result = Array(len)
   for (let index = 0; index < len; index++) {
     if (actual_array[index]) {
       const val = actual_array[index]
