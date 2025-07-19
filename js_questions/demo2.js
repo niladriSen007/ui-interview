@@ -9,7 +9,6 @@
 const ret = func()
 ret() */
 
-
 /* console.log(x)
 var x = 12 */
 
@@ -26,26 +25,23 @@ function checkIfExists(elem){
 const res = set_a?.filter(elem => checkIfExists(elem))
 console.log(res) */
 
+const ip = ["timCook", "elonMusk", "viratKholi"]
 
-const ip = ['timCook', 'elonMusk', 'viratKholi']
- 
 // expected output
 /* ['Tim Cook', 'Elon Musk', 'Virat Kholi'] */
 
-function capitalize(s){
+function capitalize(s) {
   let result = []
-  for(let elem of s){
-    if(elem != elem?.toLowerCase()){
+  for (let elem of s) {
+    if (elem != elem?.toLowerCase()) {
       let id = s.indexOf(elem)
       let val = s.slice(id)?.join("")
-      let op = s.slice(0,id)?.join("")
-      result.push(`${op} ${val}`)
+      let op = s.slice(0, id)?.join("")
+      result.push(`${op?.charAt(0)?.toUpperCase()}${op.slice(1)} ${val}`)
       return result
     }
   }
 }
 
-
-
-const [a,b,c] = ip.map(item=>capitalize(item?.split("")))
-console.log(a,b,c)
+const [a, b, c] = ip.map((item) => capitalize(item?.split("")))
+console.log([].concat(a, b, c))

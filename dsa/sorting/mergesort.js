@@ -20,7 +20,7 @@ function merge(left, right) {
   }
 
   // We are spreading because if one part of the array has been pushed to the result
-  // then other part will remaain unpushed so we are pushing the other part by using the spread operatoe
+  // then other part will remain un pushed so we are pushing the other part by using the spread operator
   return [...result, ...left.slice(i), ...right.slice(j)]
 }
 

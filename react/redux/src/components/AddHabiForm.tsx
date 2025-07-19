@@ -34,6 +34,9 @@ const AddHabiForm = () => {
 
   const onSubmit = (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault()
+    if(!formValue?.name){
+      alert("Habit name is required")
+    }
     dispatch(addHabit({
       name: formValue.name,
       frequency: formValue.frequency

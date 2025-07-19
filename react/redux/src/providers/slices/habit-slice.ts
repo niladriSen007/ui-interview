@@ -23,6 +23,11 @@ export const habitSlice = createSlice({
     addHabit(state, action: PayloadAction<{ name: string, frequency: "daily" | "weekly" }>) {
 
       const { payload } = action
+
+      if (!payload?.name) {
+        throw new Error("Nmae must be provided")
+      }
+
       const newHabit: HabitState = {
         id: new Date().toISOString(),
         name: payload.name,
@@ -33,7 +38,11 @@ export const habitSlice = createSlice({
 
       state.habits.push(newHabit)
     },
-    deleteHabit() { }
+    deleteHabit(state, action: PayloadAction<{ id: string }>) {
+      const { payload } = action
+      const habits = state?.habits?.filter(habit => habit?.id !== payload?.id)
+      state.habits = habits
+    }
   }
 })
 

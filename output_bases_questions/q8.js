@@ -6,7 +6,7 @@ z()
 
 function x(){
  var a = 20;
- console.log(this.a)
+ console.log(this.a) // 
 }
 function y(){
   console.log(this.a)
