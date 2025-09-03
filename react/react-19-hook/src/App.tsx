@@ -1,9 +1,9 @@
-import ActionState from './components/ActionState'
+import BusPass from './components/BusPass'
 
 const App = () => {
   return (
-    <div>
-      <ActionState />
+    <div className='root'>
+      <BusPass />
     </div>
   )
 }
