@@ -1,9 +1,10 @@
 import { billingInfoSchema, personalInfoSchema, professionalInfoSchema, type FormSchema } from "@/schemas";
+import type { Step } from "@/types";
 import { Briefcase, CardSimIcon, User } from "lucide-react"
 import { useState } from "react";
 
 
-const steps: Array<{ id: string; title: string; icon: React.ElementType }> = [
+const steps: Step[] = [
   {
     id: "personal-info",
     title: "Personal Information",
